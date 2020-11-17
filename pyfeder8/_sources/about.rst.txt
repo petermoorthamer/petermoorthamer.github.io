@@ -1,0 +1,11 @@
+About this project
+**********************
+
+Pyfeder8 is a Python library to interact with the services provided by the HONEUR central platform
+
+Useful links:
+
+- `Pyfeder8 @ GitHub <https://github.com/solventrix/pyfeder8>`_
+- `HONEUR Catalogue Service API documentation <https://catalogue.honeur.org/swagger-ui/index.html?url=/v3/api-docs>`_
+- `HONEUR Storage Service API documentation <https://storage.honeur.org/swagger-ui.html#/storage45controller>`_
+- `HONEUR Portal <https://portal.honeur.org/>`_

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Examples &#8212; pyfeder8 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Code docs" href="code.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-list-data-files">
+<h2>1a. List data files<a class="headerlink" href="#a-list-data-files" title="Permalink to this headline">¶</a></h2>
+<p>The credentials of an HONEUR central account are already stored, either in the local Postgres DB or in the password store of the operating system.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hss_client</span> <span class="o">=</span> <span class="n">HSS_Client</span><span class="p">(</span><span class="n">Environment</span><span class="o">.</span><span class="n">HONEUR_UAT</span><span class="p">)</span>
+<span class="n">data_files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hss_client</span><span class="o">.</span><span class="n">list_data_files</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="b-list-data-files-by-providing-a-username-and-password">
+<h2>1b. List data files by providing a username and password<a class="headerlink" href="#b-list-data-files-by-providing-a-username-and-password" title="Permalink to this headline">¶</a></h2>
+<p>No credentials of an HONEUR central account are available</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">environment</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="n">HONEUR_UAT</span>
+<span class="n">token_context</span> <span class="o">=</span> <span class="n">TokenContextProvider</span><span class="o">.</span><span class="n">get_token_context</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<span class="n">hss_client</span> <span class="o">=</span> <span class="n">HSS_Client</span><span class="p">(</span><span class="n">environment</span><span class="p">)</span>
+<span class="n">data_files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hss_client</span><span class="o">.</span><span class="n">list_data_files</span><span class="p">(</span><span class="n">token_context</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="store-a-password-in-the-os-password-store-and-retrieve-it-again">
+<h2>2. Store a password in the OS password store and retrieve it again<a class="headerlink" href="#store-a-password-in-the-os-password-store-and-retrieve-it-again" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">environment</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="n">HONEUR_UAT</span>
+<span class="n">PasswordManager</span><span class="o">.</span><span class="n">save_username_password</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">PasswordManager</span><span class="o">.</span><span class="n">get_password</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+<span class="n">username_password_credential</span> <span class="o">=</span> <span class="n">PasswordManager</span><span class="o">.</span><span class="n">get_credential</span><span class="p">(</span><span class="n">environment</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-get-tokencontext-from-the-os-password-store">
+<h2>3a. Get TokenContext from the OS password store<a class="headerlink" href="#a-get-tokencontext-from-the-os-password-store" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">environment</span> <span class="o">=</span> <span class="n">Environment</span><span class="o">.</span><span class="n">HONEUR_UAT</span>
+<span class="n">PasswordManager</span><span class="o">.</span><span class="n">save_username_password</span><span class="p">(</span><span class="n">environment</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">passwords</span><span class="p">)</span>
+<span class="n">token_context</span> <span class="o">=</span> <span class="n">TokenContextProvider</span><span class="o">.</span><span class="n">get_token_context_from_vault</span><span class="p">(</span><span class="n">environment</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="b-get-tokencontext-from-a-local-webapi">
+<h2>3b. Get TokenContext from a local WebAPI<a class="headerlink" href="#b-get-tokencontext-from-a-local-webapi" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">token_context</span> <span class="o">=</span> <span class="n">TokenContextProvider</span><span class="o">.</span><span class="n">get_token_context_from_webapi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="c-get-tokencontext-by-use-of-a-username-and-password">
+<h2>3c. Get TokenContext by use of a username and password<a class="headerlink" href="#c-get-tokencontext-by-use-of-a-username-and-password" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">token_context</span> <span class="o">=</span> <span class="n">TokenContextProvider</span><span class="o">.</span><span class="n">get_token_context</span><span class="p">(</span><span class="n">Environment</span><span class="o">.</span><span class="n">HONEUR_UAT</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyfeder8</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About this project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code docs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-list-data-files">1a. List data files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-list-data-files-by-providing-a-username-and-password">1b. List data files by providing a username and password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#store-a-password-in-the-os-password-store-and-retrieve-it-again">2. Store a password in the OS password store and retrieve it again</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-get-tokencontext-from-the-os-password-store">3a. Get TokenContext from the OS password store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-get-tokencontext-from-a-local-webapi">3b. Get TokenContext from a local WebAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-get-tokencontext-by-use-of-a-username-and-password">3c. Get TokenContext by use of a username and password</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="code.html" title="previous chapter">Code docs</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peter Moorthamer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/examples.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

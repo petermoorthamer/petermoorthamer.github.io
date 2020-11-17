@@ -1,0 +1,55 @@
+Examples
+**********************
+
+1a. List data files
+============================================================================================
+The credentials of an HONEUR central account are already stored, either in the local Postgres DB or in the password store of the operating system.
+
+.. code-block:: python
+
+    hss_client = HSS_Client(Environment.HONEUR_UAT)
+    data_files = self.hss_client.list_data_files()
+
+1b. List data files by providing a username and password
+============================================================================================
+No credentials of an HONEUR central account are available
+
+.. code-block:: python
+
+    environment = Environment.HONEUR_UAT
+    token_context = TokenContextProvider.get_token_context(environment, username, password)
+    hss_client = HSS_Client(environment)
+    data_files = self.hss_client.list_data_files(token_context)
+
+2. Store a password in the OS password store and retrieve it again
+============================================================================================
+
+.. code-block:: python
+
+    environment = Environment.HONEUR_UAT
+    PasswordManager.save_username_password(environment, username, password)
+    password = PasswordManager.get_password(environment, username)
+    username_password_credential = PasswordManager.get_credential(environment)
+
+3a. Get TokenContext from the OS password store
+============================================================================================
+
+.. code-block:: python
+
+    environment = Environment.HONEUR_UAT
+    PasswordManager.save_username_password(environment, username, passwords)
+    token_context = TokenContextProvider.get_token_context_from_vault(environment)
+
+3b. Get TokenContext from a local WebAPI
+============================================================================================
+
+.. code-block:: python
+
+    token_context = TokenContextProvider.get_token_context_from_webapi()
+
+3c. Get TokenContext by use of a username and password
+============================================================================================
+
+.. code-block:: python
+
+    token_context = TokenContextProvider.get_token_context(Environment.HONEUR_UAT, username, password)

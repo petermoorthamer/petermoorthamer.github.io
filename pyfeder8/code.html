@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Code docs &#8212; pyfeder8 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="About this project" href="about.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="code-docs">
+<h1>Code docs<a class="headerlink" href="#code-docs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pyfeder8.catalogue.CatalogueClient">
+<span id="catalogueclient"></span><h2>CatalogueClient<a class="headerlink" href="#module-pyfeder8.catalogue.CatalogueClient" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient">
+<em class="property">class </em><code class="sig-prename descclassname">pyfeder8.catalogue.CatalogueClient.</code><code class="sig-name descname">CatalogueClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em>, <em class="sig-param"><span class="n">verify_tls</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python client to call the REST API of the HONEUR Catalogue Service (HCS)
+The environment determines the environment (PRD, UAT, DEV) to connect to</p>
+<dl class="py method">
+<dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient.get_study">
+<code class="sig-name descname">get_study</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient.get_study" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the study with the given ID from the Study Catalogue</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_studies">
+<code class="sig-name descname">list_studies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_studies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of all studies from the Study Catalogue</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient.save_script_result">
+<code class="sig-name descname">save_script_result</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">script_version_uuid</span></em>, <em class="sig-param"><span class="n">result_file</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient.save_script_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the given result for the script with the given UUID</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyfeder8.storage.HSS_Client">
+<span id="hss-client"></span><h2>HSS_Client<a class="headerlink" href="#module-pyfeder8.storage.HSS_Client" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client">
+<em class="property">class </em><code class="sig-prename descclassname">pyfeder8.storage.HSS_Client.</code><code class="sig-name descname">HSS_Client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em>, <em class="sig-param"><span class="n">verify_tls</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python client to call the REST API of the HONEUR Storage Service (HSS)
+The environment determines the environment (PRD, UAT, DEV) to connect to</p>
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.delete_file">
+<code class="sig-name descname">delete_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.delete_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the file with the given UUID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.download_file">
+<code class="sig-name descname">download_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.download_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the file with the given UUID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_data_files">
+<code class="sig-name descname">list_data_files</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_data_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all files in the data folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_notebook_results">
+<code class="sig-name descname">list_notebook_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">external_notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reverse_order</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_notebook_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of results for the study with the given Study ID,
+additional criteria like the UUID of the notebook / shared notebook can be specified to further filter the list.
+The latest_version_only flag can be used to only return the latest version of the results, the reverse_order
+flag can be used to reverse the default order of the list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_studies">
+<code class="sig-name descname">list_studies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_studies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all studies from the Study Catalogue</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_documents">
+<code class="sig-name descname">list_study_documents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_documents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of document files that belong to the study with the given ID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_files">
+<code class="sig-name descname">list_study_files</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all files for the study with the given Study ID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_notebooks">
+<code class="sig-name descname">list_study_notebooks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">external_notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_notebooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all shared notebooks of the study with the given Study ID.
+The UUID of the Zepl notebook can be specified to filter the list of notebooks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.save_data_file">
+<code class="sig-name descname">save_data_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.save_data_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the given file in the data folder and returns the UUID of the saved file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.save_notebook_results">
+<code class="sig-name descname">save_notebook_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">notebook_uuid</span></em>, <em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">zip_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.save_notebook_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the result files for the notebook with the given UUID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.save_study_document">
+<code class="sig-name descname">save_study_document</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">document_uuid</span></em>, <em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.save_study_document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the given file in the documents folder and study sub folder and assigns the given UUID to it</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyfeder8.Environment">
+<span id="environment"></span><h2>Environment<a class="headerlink" href="#module-pyfeder8.Environment" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyfeder8.Environment.Environment">
+<em class="property">class </em><code class="sig-prename descclassname">pyfeder8.Environment.</code><code class="sig-name descname">Environment</code><a class="headerlink" href="#pyfeder8.Environment.Environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference for a HONEUR, resp. PHederation PRD, UAT or DEV installation
+Provides the correct API URLs for each of the environments</p>
+<dl class="py method">
+<dt id="pyfeder8.Environment.Environment.get_catalogue_api_url">
+<code class="sig-name descname">get_catalogue_api_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.Environment.Environment.get_catalogue_api_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of the Catalogue Service API for the given environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.Environment.Environment.get_hss_api_url">
+<code class="sig-name descname">get_hss_api_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.Environment.Environment.get_hss_api_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of the HONEUR Storage Service (HSS) API for the given environment</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.Environment.Environment.get_login_api_url">
+<code class="sig-name descname">get_login_api_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.Environment.Environment.get_login_api_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of the login API for the given environment</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyfeder8.PasswordManager">
+<span id="passwordmanager"></span><h2>PasswordManager<a class="headerlink" href="#module-pyfeder8.PasswordManager" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="pyfeder8.PasswordManager.get_credential">
+<code class="sig-prename descclassname">pyfeder8.PasswordManager.</code><code class="sig-name descname">get_credential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.PasswordManager.get_credential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the username and password credentials for the given environment
+from the password store of the OS that is running this code
+Only 1 username per environment is when this function is used!</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyfeder8.PasswordManager.get_password">
+<code class="sig-prename descclassname">pyfeder8.PasswordManager.</code><code class="sig-name descname">get_password</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.PasswordManager.get_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the password for the given user and environment
+from the password store of the OS that is running this code</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyfeder8.PasswordManager.save_username_password">
+<code class="sig-prename descclassname">pyfeder8.PasswordManager.</code><code class="sig-name descname">save_username_password</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.PasswordManager.save_username_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the given username and password for the given environment
+in the password store of the OS that is running this code</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyfeder8.ScriptUuidFinder">
+<span id="scriptuuidfinder"></span><h2>ScriptUuidFinder<a class="headerlink" href="#module-pyfeder8.ScriptUuidFinder" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyfeder8.TokenContext">
+<span id="tokencontext"></span><h2>TokenContext<a class="headerlink" href="#module-pyfeder8.TokenContext" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyfeder8.TokenContext.TokenContext">
+<em class="property">class </em><code class="sig-prename descclassname">pyfeder8.TokenContext.</code><code class="sig-name descname">TokenContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token</span></em>, <em class="sig-param"><span class="n">fingerprint</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.TokenContext.TokenContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a JWT token and its associated fingerprint</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyfeder8.TokenContextProvider">
+<span id="tokencontextprovider"></span><h2>TokenContextProvider<a class="headerlink" href="#module-pyfeder8.TokenContextProvider" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="pyfeder8.TokenContextProvider.get_token_context">
+<code class="sig-prename descclassname">pyfeder8.TokenContextProvider.</code><code class="sig-name descname">get_token_context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a><a class="headerlink" href="#pyfeder8.TokenContextProvider.get_token_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs on to the given Environment with the given username and password to get a valid TokenContext
+(token and its associated fingerprint)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyfeder8.TokenContextProvider.get_token_context_from_vault">
+<code class="sig-prename descclassname">pyfeder8.TokenContextProvider.</code><code class="sig-name descname">get_token_context_from_vault</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.Environment.Environment" title="pyfeder8.Environment.Environment">pyfeder8.Environment.Environment</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a><a class="headerlink" href="#pyfeder8.TokenContextProvider.get_token_context_from_vault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the username and password of a central HONEUR account from a local vault
+and retrieves a valid token (and its associated fingerprint) by use of the username / password combination</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyfeder8.TokenContextProvider.get_token_context_from_webapi">
+<code class="sig-prename descclassname">pyfeder8.TokenContextProvider.</code><code class="sig-name descname">get_token_context_from_webapi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">webapi_base_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a><a class="headerlink" href="#pyfeder8.TokenContextProvider.get_token_context_from_webapi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a TokenContext (a token and its associated fingerprint) by calling the token
+REST endpoint exposed by the WebAPI (backend of Atlas)
+:param webapi_base_url: the base URL of the webAPI service that will be called to generate the TokenContext,
+when the base URL is not provided, the default URL of a local Docker installation will be used
+:return: TokenContext</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyfeder8</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About this project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.catalogue.CatalogueClient">CatalogueClient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.storage.HSS_Client">HSS_Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.Environment">Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.PasswordManager">PasswordManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.ScriptUuidFinder">ScriptUuidFinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.TokenContext">TokenContext</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyfeder8.TokenContextProvider">TokenContextProvider</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="about.html" title="previous chapter">About this project</a></li>
+      <li>Next: <a href="examples.html" title="next chapter">Examples</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Peter Moorthamer.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

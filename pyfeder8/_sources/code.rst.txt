@@ -1,0 +1,37 @@
+Code docs
+**********************
+
+CatalogueClient
+======================
+.. automodule:: pyfeder8.catalogue.CatalogueClient
+   :members:
+
+HSS_Client
+======================
+.. automodule:: pyfeder8.storage.HSS_Client
+   :members:
+
+Environment
+======================
+.. automodule:: pyfeder8.Environment
+    :members:
+
+PasswordManager
+======================
+.. automodule:: pyfeder8.PasswordManager
+    :members:
+
+ScriptUuidFinder
+======================
+.. automodule:: pyfeder8.ScriptUuidFinder
+    :members:
+
+TokenContext
+======================
+.. automodule:: pyfeder8.TokenContext
+    :members:
+
+TokenContextProvider
+======================
+.. automodule:: pyfeder8.TokenContextProvider
+    :members:
