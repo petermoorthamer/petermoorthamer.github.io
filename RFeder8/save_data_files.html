@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Saves a file to the storage service</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for save_data_files {tools}"><tr><td>save_data_files {tools}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Saves a file to the storage service</h2>
+
+<h3>Description</h3>
+
+<p>Saves a file to the storage service
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+save_data_files(env, file_name, auth_source)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>env</code></td>
+<td>
+<p>A string in uppercase for the environment i.e. &quot;HONEUR&quot;, &quot;HONEUR_UAT&quot;, &quot;HONEUR_DEV&quot;, &quot;PHEDERATION&quot;, &quot;PHEDERATION_UAT&quot;, &quot;PHEDERATION_DEV&quot;.</p>
+</td></tr>
+<tr valign="top"><td><code>file_name</code></td>
+<td>
+<p>A string indicating the path for the file to be saved</p>
+</td></tr>
+<tr valign="top"><td><code>auth_source</code></td>
+<td>
+<p>A string indicating the source of authentication i.e. &quot;webapi&quot; or &quot;local&quot;.</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+save_data_files("HONEUR","//Users/paul/results.csv","local")
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>tools</em> version 3.6.1 ]</div>
+</body></html>
