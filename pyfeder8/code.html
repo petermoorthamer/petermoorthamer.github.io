@@ -49,6 +49,12 @@ The environment determines the environment (PRD, UAT, DEV) to connect to</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_script_results">
+<code class="sig-name descname">list_script_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">script_version_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_script_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of script results for the given study</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_studies">
 <code class="sig-name descname">list_studies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.catalogue.CatalogueClient.CatalogueClient.list_studies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves a list of all studies from the Study Catalogue</p>
@@ -71,14 +77,26 @@ The environment determines the environment (PRD, UAT, DEV) to connect to</p>
 <dd><p>A Python client to call the REST API of the HONEUR Storage Service (HSS)
 The environment determines the environment (PRD, UAT, DEV) to connect to</p>
 <dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.delete_file">
-<code class="sig-name descname">delete_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.delete_file" title="Permalink to this definition">¶</a></dt>
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.delete_file_with_key">
+<code class="sig-name descname">delete_file_with_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.delete_file_with_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the file with the given file key</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.delete_file_with_uuid">
+<code class="sig-name descname">delete_file_with_uuid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.delete_file_with_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the file with the given UUID</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.download_file">
-<code class="sig-name descname">download_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.download_file" title="Permalink to this definition">¶</a></dt>
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.download_file_with_key">
+<code class="sig-name descname">download_file_with_key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.download_file_with_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the file with the given file key</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.download_file_with_uuid">
+<code class="sig-name descname">download_file_with_uuid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uuid</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.download_file_with_uuid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the file with the given UUID</p>
 </dd></dl>
 
@@ -89,37 +107,9 @@ The environment determines the environment (PRD, UAT, DEV) to connect to</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_notebook_results">
-<code class="sig-name descname">list_notebook_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">external_notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">latest_version_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reverse_order</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_notebook_results" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of results for the study with the given Study ID,
-additional criteria like the UUID of the notebook / shared notebook can be specified to further filter the list.
-The latest_version_only flag can be used to only return the latest version of the results, the reverse_order
-flag can be used to reverse the default order of the list</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_studies">
-<code class="sig-name descname">list_studies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_studies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of all studies from the Study Catalogue</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_documents">
-<code class="sig-name descname">list_study_documents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_documents" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of document files that belong to the study with the given ID</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_files">
-<code class="sig-name descname">list_study_files</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of all files for the study with the given Study ID</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_study_notebooks">
-<code class="sig-name descname">list_study_notebooks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">external_notebook_uuid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_study_notebooks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a list of all shared notebooks of the study with the given Study ID.
-The UUID of the Zepl notebook can be specified to filter the list of notebooks</p>
+<dt id="pyfeder8.storage.HSS_Client.HSS_Client.list_files">
+<code class="sig-name descname">list_files</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_key_prefix</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.list_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of files whose file key matches the given file key prefix</p>
 </dd></dl>
 
 <dl class="py method">
@@ -131,13 +121,7 @@ The UUID of the Zepl notebook can be specified to filter the list of notebooks</
 <dl class="py method">
 <dt id="pyfeder8.storage.HSS_Client.HSS_Client.save_notebook_results">
 <code class="sig-name descname">save_notebook_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">notebook_uuid</span></em>, <em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">zip_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.save_notebook_results" title="Permalink to this definition">¶</a></dt>
-<dd><p>Saves the result files for the notebook with the given UUID</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pyfeder8.storage.HSS_Client.HSS_Client.save_study_document">
-<code class="sig-name descname">save_study_document</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">study_id</span></em>, <em class="sig-param"><span class="n">document_uuid</span></em>, <em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">token_context</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#pyfeder8.TokenContext.TokenContext" title="pyfeder8.TokenContext.TokenContext">pyfeder8.TokenContext.TokenContext</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyfeder8.storage.HSS_Client.HSS_Client.save_study_document" title="Permalink to this definition">¶</a></dt>
-<dd><p>Saves the given file in the documents folder and study sub folder and assigns the given UUID to it</p>
+<dd><p>Saves the result files for the notebook with the given UUID. Deprecated! CatalogueClient.save_script_result should be used instead!</p>
 </dd></dl>
 
 </dd></dl>
